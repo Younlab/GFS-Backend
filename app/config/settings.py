@@ -1,15 +1,20 @@
+import json
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ROOT_DIR = os.path.dirname('BASE_DIR')
-MEDIA_ROOT = os.path.join('ROOT_DIR', '.media')
+ROOT_DIR = os.path.dirname(BASE_DIR)
+
+MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
 MEDIA_URL = '/media/'
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+
+# SECRET SETTINGS
+SECRET_DIR = os.path.join(ROOT_DIR, '.secrets')
+SECRET_ROOT = os.path.join(SECRET_DIR, 'secret.json')
+secrets = json.load(open(SECRET_ROOT))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+$b9s2)2s+=4t8vv2fr#xn=hqy&#@7v)2v4ag1j@&=7=9iwnbc'
+SECRET_KEY = secrets['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
