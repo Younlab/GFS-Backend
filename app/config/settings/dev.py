@@ -5,7 +5,10 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-INSTALLED_APPS += []
+INSTALLED_APPS += [
+    'debug_toolbar',
+    'django_extensions',
+]
 
 DATABASES = {
     'default': {
@@ -18,4 +21,10 @@ DATABASES = {
     }
 }
 
+# debug toolbar setting
+INTERNAL_IPS = ('127.0.0.1',)
+
 WSGI_APPLICATION = 'config.wsgi.dev.application'
+MIDDLEWARE += [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+]
