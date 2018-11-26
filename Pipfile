@@ -12,6 +12,8 @@ django-extensions = "*"
 django = "*"
 psycopg2-binary = "*"
 pillow = "*"
+djangorestframework = "*"
+django-filter = "*"
 
 [requires]
 python_version = "3.7"
