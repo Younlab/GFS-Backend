@@ -5,6 +5,8 @@
 # Secret Files
 .secrets
 
+# django static file
+.media
 
 ### Django ###
 *.log

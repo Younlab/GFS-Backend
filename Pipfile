@@ -14,6 +14,7 @@ psycopg2-binary = "*"
 pillow = "*"
 djangorestframework = "*"
 django-filter = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
