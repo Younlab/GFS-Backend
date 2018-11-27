@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'django_filters',
+    'corsheaders',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,7 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# django-cors-headers
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8080',
+    '192.168.0.7:8080',
+)
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

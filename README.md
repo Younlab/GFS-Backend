@@ -9,6 +9,7 @@
 - pillow
 - djangorestframework
 - django-filter
+- django-cors-headers
 - requests
 
 ## Command
