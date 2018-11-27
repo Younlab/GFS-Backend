@@ -23,5 +23,6 @@ pipenv install
 Crawling Command
 
 ```sh
+# app/manage.py
 ./manage.py update_doll
 ```
